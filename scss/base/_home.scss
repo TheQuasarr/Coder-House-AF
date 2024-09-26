@@ -1,0 +1,250 @@
+//estilos de home//
+@import"../utilidades/mixin";
+@import"../utilidades/listas";
+
+
+header{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #D5D0CA;
+    nav{
+        ul{
+            list-style: none;
+            display: flex;
+            gap: 2.5rem;
+            text-align: center;
+            li{
+                padding: 10px;
+                border-radius: 80px;
+                background-color: nth($list-color, 4);
+                transition: background-color 0.5s;
+                &:hover {
+                background-color: nth($list-color,5);
+                 }
+                a{
+                    color: black;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+header{
+    .pestañas{
+        nav{
+            ul{
+                li{
+                    a{
+                        color: black;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+//SECCION MAIN
+
+.main-general{
+    padding: 20px;
+    text-align: center;
+    background-color: #637373;
+    h2{
+        color: #FFEADB;
+        padding: 20px;
+        margin: 50px 50px;
+        border-radius: 80px;
+        background-color: black;
+    }
+}
+
+
+.main-general{
+    padding: 30px 20px;
+}
+
+/* estilo del index para desktop */
+
+@media screen and (min-width: 1024px){
+    h2{
+        @include h2-desktop
+    }
+
+    .texto-main{
+        padding: 30px 400px;
+    }
+}
+
+//nestring de las imagenes en general
+
+main{
+    img{
+        margin: 20px 20px;
+        padding: 2px;
+        border-radius: 10px;
+        background-color: black; 
+    }
+}
+
+/*PAGINA PANADERIA*/
+
+.main-general{
+    .texto-panaderia{
+        margin: 40px 50px;
+        text-align: center;
+        align-items: center;
+    }
+}
+
+.campo, .demi, .molde, .focaccia{
+    @include orden-panes;
+    img{
+        border-radius: 50px;
+    }
+}
+
+/*PAGINA PASTELERIA*/
+
+.main-general{
+        .texto-pasteleria{
+            margin: 40px 50px;
+            text-align: center;
+            align-items: center;
+        }
+}
+
+.budin-limon, .coockie-avellanas, .alfajor-mani, .pepas{
+    @include orden-pasteleria;
+    img{
+        border-radius: 50px;
+    }
+}
+
+/*PAGINA LAMINADOS*/
+
+.main-general{
+    .texto-laminados{
+        margin: 40px 50px;
+        text-align: center;
+        align-items: center;
+    }
+}
+
+.medialuna-manteca, .medialuna-grasa, .palmeritas{
+    @include orden-laminados;
+    img{
+        border-radius: 50px;
+    }
+}
+.main-general{
+    .comentarios{
+        .all-com{
+            color: whitesmoke;
+            padding: 20px;
+            margin: 10px;
+            background-color: #679b9c;
+            border-radius: 20px;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .main-general .comentarios{
+        display: grid;
+        grid-template-columns: 2fr;
+        grid-template-rows: 3fr;
+    }
+    .main-general .comentarios .com-1{
+        grid-column: span 2;
+    }
+    .main-general .comentarios .com-2{
+        grid-column: span 1;
+    }
+    .main-general .comentarios .com-3{
+        grid-column: span 1;
+    }
+    .main-general .comentarios .com-4{
+        grid-column: span 2;
+    }
+}
+
+
+/*PAGINA GALERIA*/
+body, .body-galeria{
+    background-color: #679b9c;
+}
+.main-g{
+    .texto-galeria{
+        text-align: center;
+        margin: 50px;
+        padding: 30px;
+    }
+}
+
+.main-g{
+    .contenedor{
+        height: 70vh;
+        margin: 30px 30px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 33%);
+        row-gap: 10px;
+        align-content: center;
+    }
+}
+
+.main-g{
+    div{
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.main-g .contenedor .img-dos, .main-g .contenedor .img-cinco{
+    display: none;
+}
+
+/*estilos tablet*/
+
+@media screen and (min-width:600px){
+    
+    .main-g .contenedor{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 50%);
+        column-gap: 10px;
+    }
+    .main-g .contenedor .img-cuatro{
+        grid-column: span 2;
+    }
+}
+
+/*estilos desktop*/
+
+@media screen and (min-width:1024px){
+    
+    .main-g .contenedor .img-dos, .main-g .contenedor .img-cinco{
+        display: block;
+    }
+    .main-g .contenedor{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 30% 30% 20%;
+    }
+    
+    .main-g .contenedor .img-uno, .main-g .contenedor .img-tres{
+        grid-row: span 2;
+    }
+    .main-g .contenedor .img-dos, .main-g .contenedor .img-cuatro{
+        grid-column: span 1;
+    }
+    .main-g .contenedor .img-cinco{
+        grid-column: span 3;
+    }
+}
+

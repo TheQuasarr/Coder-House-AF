@@ -1,321 +1,218 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-
-/* SECCION HEADER */
-
-header{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-evenly;
-    background-color: #D5D0CA
+body {
+  background-color: #637373;
 }
 
-header nav ul{
-    list-style: none;
-    display: flex;
-    gap: 2.5rem;
-    text-align: center;
+header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #D5D0CA;
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2.5rem;
+  text-align: center;
+}
+header nav ul li {
+  padding: 10px;
+  border-radius: 80px;
+  background-color: #679B9C;
+  transition: background-color 0.5s;
+}
+header nav ul li:hover {
+  background-color: #065f61;
+}
+header nav ul li a {
+  color: black;
+  text-decoration: none;
 }
 
-header nav ul li{
-    padding: 10px;
-    border-radius: 80px;
-    background-color: #679b9c;
-
+header .pestañas nav ul li a {
+  color: black;
+  text-decoration: none;
 }
-
-header .pestañas nav ul li a{
-    color: black;
-    text-decoration: none;
-}
-
-/* SECCION MAIN */
-
-/* Se intentara trabajar de primera mano para que esta compilacion que se hara a continuacion pueda establecerce en todas las paginas, de no ser posible se tratara de ahcer un div en cada una para ser personalizada repetidamente */
 
 .main-general {
-    padding: 20px;
-    text-align: center;
-    background-color: #637373;
+  padding: 20px;
+  text-align: center;
+  background-color: #637373;
+}
+.main-general h2 {
+  color: #FFEADB;
+  padding: 20px;
+  margin: 50px 50px;
+  border-radius: 80px;
+  background-color: black;
 }
 
-/* estilo del index para el telefono */
-
-h2{
-    color: #FFEADB;
-    padding: 20px;
-    margin: 50px 50px;
-    border-radius: 80px;
-    background-color: black;
+.main-general {
+  padding: 30px 20px;
 }
-
-.main-general{
-    padding: 30px 20px;
-}
-
 
 /* estilo del index para desktop */
-
-@media screen and (min-width: 1024px){
-    h2{
-        color: #FFEADB;
-        padding: 20px;
-        margin: 50px 500px;
-        border-radius: 80px;
-        background-color: black;
-    }
-
-    .texto-main{
-        padding: 30px 400px;
-    }
-}
-
-main .img-main-index img{
-    margin: 20px 20px;
-    padding: 2px;
-    border-radius: 10px;
-    background-color: black;
-}
-
-/* SE DEBE CONTINUEAR CON EL DISEÑADO Y GREGADOS DE LOREM Y FOTOS PARA LOS DEMAS HTML, PARA LUEGO ESTRUCTURARLOS CON LAS PREMISAS QUE SE SOLICITARON */
-
-main img{
-    margin: 20px 20px;
-    padding: 2px;
-    border-radius: 10px;
-    background-color: black; 
-}
-
-
-/* PAGINA PANADERIA */
-
-.main-general h2{
-    color: whitesmoke;
-}
-.main-general .texto-panaderia{
-    align-items: center;
-    margin: 30px 50px;
-}
-
-
-.campo{
-    display: flex;
-    align-items: center;
-    margin: 40px;
-}
-.campo img{
-    border-radius: 50px;
-}
-
-
-.demi{
-    display: flex;
-    align-items: center;
-    margin: 40px;
-}
-.demi img{
-    border-radius: 50px
-}
-
-
-.molde{
-    display: flex;
-    align-items: center;
-    margin: 40px;
-}
-.molde img{
-    border-radius: 50px;
-}
-
-
-.focaccia{
-    display: flex;
-    align-items: center;
-    margin: 40px;
-}
-.focaccia img{
-    border-radius: 50px;
-}
-
-
-/* PAGINA PASTELERIA */
-
-.main-general div .texto-pasteleria{
-    margin: 30px 20px;
-    text-align: center;
-    align-items: center;
-}
-
-
-.budin-limon{
-    display: flex;
-    align-items: center;
-}
-.budin-limon img{
-    border-radius: 50px;
-}
-
-.coockie-avellanas{
-    display: flex;
-    align-items: center;
-}
-.coockie-avellanas img{
-    border-radius: 50px;
-}
-
-.alfajor-mani{
-    display: flex;
-    align-items: center;
-}
-.alfajor-mani img{
-    border-radius: 50px;
-}
-
-.pepas{
-    display: flex;
-    align-items: center;
-}
-.pepas img{
-    border-radius: 50px;
-}
-
-/* PAGINA LAMINADOS */
-
-.medialuna-manteca{
-    display: flex;
-    align-items: center;
-}
-.medialuna-manteca img{
-    border-radius: 50px;
-}
-
-.medialuna-grasa{
-    display: flex;
-    align-items: center;
-}
-.medialuna-grasa img{
-    border-radius: 50px;
-}
-
-.palmeritas{
-    display: flex;
-    align-items: center;
-}
-.palmeritas img{
-    border-radius: 50px;
-}
-
-
-.main-general .comentarios .all-com{
-    color: whitesmoke;
+@media screen and (min-width: 1024px) {
+  h2 {
+    color: #FFEADB;
     padding: 20px;
-    margin: 10px;
-    background-color: #679b9c;
-    border-radius: 20px;
+    margin: 50px 500px;
+    border-radius: 80px;
+    background-color: black;
+  }
+  .texto-main {
+    padding: 30px 400px;
+  }
+}
+main img {
+  margin: 20px 20px;
+  padding: 2px;
+  border-radius: 10px;
+  background-color: black;
 }
 
-@media screen and (min-width: 1024px){
-    .main-general .comentarios{
-        display: grid;
-        grid-template-columns: 2fr;
-        grid-template-rows: 3fr;
-    }
-    .main-general .comentarios .com-1{
-        grid-column: span 2;
-    }
-    .main-general .comentarios .com-2{
-        grid-column: span 1;
-    }
-    .main-general .comentarios .com-3{
-        grid-column: span 1;
-    }
-    .main-general .comentarios .com-4{
-        grid-column: span 2;
-    }
+/*PAGINA PANADERIA*/
+.main-general .texto-panaderia {
+  margin: 40px 50px;
+  text-align: center;
+  align-items: center;
 }
 
-/* PAGINA GALERIA */
-
-/* ".main-g" esta identificando solamente al main de la galeria, debido a que chocaba con los demas mains a los cuales se les asigno "main-general */
-
-.main-g .texto-galeria{
-    text-align: center;
-    margin: 50px;
-    padding: 30px;
+.campo, .demi, .molde, .focaccia {
+  display: flex;
+  align-items: center;
+  margin: 40px;
+}
+.campo img, .demi img, .molde img, .focaccia img {
+  border-radius: 50px;
 }
 
-/* quiero pensar que escribirlo de esta manera solo toma las imagenes de la galeria --.main-g .contenedor-----  simula el MAIN del profe*/
+/*PAGINA PASTELERIA*/
+.main-general .texto-pasteleria {
+  margin: 40px 50px;
+  text-align: center;
+  align-items: center;
+}
 
-/* estilos de main movil */
+.budin-limon, .coockie-avellanas, .alfajor-mani, .pepas {
+  display: flex;
+  align-items: center;
+  margin: 40px;
+}
+.budin-limon img, .coockie-avellanas img, .alfajor-mani img, .pepas img {
+  border-radius: 50px;
+}
 
-.main-g .contenedor{
-    height: 70vh;
-    margin: 30px 30px;
+/*PAGINA LAMINADOS*/
+.main-general .texto-laminados {
+  margin: 40px 50px;
+  text-align: center;
+  align-items: center;
+}
+
+.medialuna-manteca, .medialuna-grasa, .palmeritas {
+  display: flex;
+  align-items: center;
+  margin: 40px;
+}
+.medialuna-manteca img, .medialuna-grasa img, .palmeritas img {
+  border-radius: 50px;
+}
+
+.main-general .comentarios .all-com {
+  color: whitesmoke;
+  padding: 20px;
+  margin: 10px;
+  background-color: #679b9c;
+  border-radius: 20px;
+}
+
+@media screen and (min-width: 1024px) {
+  .main-general .comentarios {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 33%);
-    row-gap: 10px;
-    align-content: center;
+    grid-template-columns: 2fr;
+    grid-template-rows: 3fr;
+  }
+  .main-general .comentarios .com-1 {
+    grid-column: span 2;
+  }
+  .main-general .comentarios .com-2 {
+    grid-column: span 1;
+  }
+  .main-general .comentarios .com-3 {
+    grid-column: span 1;
+  }
+  .main-general .comentarios .com-4 {
+    grid-column: span 2;
+  }
+}
+/*PAGINA GALERIA*/
+body, .body-galeria {
+  background-color: #679b9c;
 }
 
-.main-g div img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.main-g .texto-galeria {
+  text-align: center;
+  margin: 50px;
+  padding: 30px;
 }
 
-.main-g .contenedor .img-dos, .main-g .contenedor .img-cinco{
-    display: none;
+.main-g .contenedor {
+  height: 70vh;
+  margin: 30px 30px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 33%);
+  row-gap: 10px;
+  align-content: center;
 }
 
-/* ESTILOS TABLET */
-
-@media screen and (min-width:600px){
-    
-    .main-g .contenedor{
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 50%);
-        column-gap: 10px;
-    }
-    .main-g .contenedor .img-cuatro{
-        grid-column: span 2;
-    }
+.main-g div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-/* ESTILOS DESKTOP */
-
-@media screen and (min-width:1024px){
-    
-    .main-g .contenedor .img-dos, .main-g .contenedor .img-cinco{
-        display: block;
-    }
-    .main-g .contenedor{
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 30% 30% 20%;
-    }
-    
-    .main-g .contenedor .img-uno, .main-g .contenedor .img-tres{
-        grid-row: span 2;
-    }
-    .main-g .contenedor .img-dos, .main-g .contenedor .img-cuatro{
-        grid-column: span 1;
-    }
-    .main-g .contenedor .img-cinco{
-        grid-column: span 3;
-    }
+.main-g .contenedor .img-dos, .main-g .contenedor .img-cinco {
+  display: none;
 }
 
+/*estilos tablet*/
+@media screen and (min-width: 600px) {
+  .main-g .contenedor {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 50%);
+    column-gap: 10px;
+  }
+  .main-g .contenedor .img-cuatro {
+    grid-column: span 2;
+  }
+}
+/*estilos desktop*/
+@media screen and (min-width: 1024px) {
+  .main-g .contenedor .img-dos, .main-g .contenedor .img-cinco {
+    display: block;
+  }
+  .main-g .contenedor {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 30% 30% 20%;
+  }
+  .main-g .contenedor .img-uno, .main-g .contenedor .img-tres {
+    grid-row: span 2;
+  }
+  .main-g .contenedor .img-dos, .main-g .contenedor .img-cuatro {
+    grid-column: span 1;
+  }
+  .main-g .contenedor .img-cinco {
+    grid-column: span 3;
+  }
+}
 
-
-
-
-
-
-
-
-
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,25 @@
+@mixin orden-panes{
+    display: flex;
+    align-items: center;
+    margin: 40px;
+};
+
+@mixin orden-pasteleria{
+    display: flex;
+    align-items: center;
+    margin: 40px;
+}
+
+@mixin orden-laminados{
+    display: flex;
+    align-items: center;
+    margin: 40px;
+}
+
+@mixin h2-desktop{
+    color: #FFEADB;
+    padding: 20px;
+    margin: 50px 500px;
+    border-radius: 80px;
+    background-color: black
+}
