@@ -1,18 +1,21 @@
 @mixin orden-panes{
     display: flex;
     align-items: center;
+
     margin: 40px;
 };
 
 @mixin orden-pasteleria{
     display: flex;
     align-items: center;
+
     margin: 40px;
 }
 
 @mixin orden-laminados{
     display: flex;
     align-items: center;
+    
     margin: 40px;
 }
 

@@ -19,7 +19,7 @@ header {
 header nav ul {
   list-style: none;
   display: flex;
-  gap: 2.5rem;
+  gap: 1rem;
   text-align: center;
 }
 header nav ul li {
@@ -163,7 +163,6 @@ body, .body-galeria {
   margin: 50px;
   padding: 30px;
 }
-
 .main-g .contenedor {
   height: 70vh;
   margin: 30px 30px;
@@ -173,15 +172,14 @@ body, .body-galeria {
   row-gap: 10px;
   align-content: center;
 }
-
+.main-g .contenedor .img-dos, .main-g .contenedor .img-cinco {
+  display: none;
+}
 .main-g div img {
+  margin: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-.main-g .contenedor .img-dos, .main-g .contenedor .img-cinco {
-  display: none;
 }
 
 /*estilos tablet*/

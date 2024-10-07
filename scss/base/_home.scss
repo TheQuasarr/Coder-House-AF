@@ -13,7 +13,7 @@ header{
         ul{
             list-style: none;
             display: flex;
-            gap: 2.5rem;
+            gap: 1rem;
             text-align: center;
             li{
                 padding: 10px;
@@ -157,35 +157,41 @@ main{
         display: grid;
         grid-template-columns: 2fr;
         grid-template-rows: 3fr;
+        
+        .com-1{
+            grid-column: span 2;
+        }
+        
+        .com-2{
+            grid-column: span 1;
+        }
+        
+        .com-3{
+            grid-column: span 1;
+        }
+        
+        .com-4{
+            grid-column: span 2;
+        }
     }
-    .main-general .comentarios .com-1{
-        grid-column: span 2;
-    }
-    .main-general .comentarios .com-2{
-        grid-column: span 1;
-    }
-    .main-general .comentarios .com-3{
-        grid-column: span 1;
-    }
-    .main-general .comentarios .com-4{
-        grid-column: span 2;
-    }
+
 }
 
 
 /*PAGINA GALERIA*/
+
 body, .body-galeria{
     background-color: #679b9c;
 }
+
 .main-g{
     .texto-galeria{
         text-align: center;
         margin: 50px;
         padding: 30px;
+        
     }
-}
 
-.main-g{
     .contenedor{
         height: 70vh;
         margin: 30px 30px;
@@ -194,12 +200,15 @@ body, .body-galeria{
         grid-template-rows: repeat(3, 33%);
         row-gap: 10px;
         align-content: center;
+        
+        .img-dos, .img-cinco{
+            display: none;
+        }
     }
-}
 
-.main-g{
     div{
         img{
+            margin: 0;
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -207,9 +216,10 @@ body, .body-galeria{
     }
 }
 
-.main-g .contenedor .img-dos, .main-g .contenedor .img-cinco{
-    display: none;
-}
+
+
+
+
 
 /*estilos tablet*/
 
@@ -219,10 +229,12 @@ body, .body-galeria{
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 50%);
         column-gap: 10px;
+        
+        .img-cuatro{
+            grid-column: span 2;
     }
-    .main-g .contenedor .img-cuatro{
-        grid-column: span 2;
     }
+
 }
 
 /*estilos desktop*/
