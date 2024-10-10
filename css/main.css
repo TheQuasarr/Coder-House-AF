@@ -36,43 +36,84 @@ header nav ul li a {
   text-decoration: none;
 }
 
+header .pestañas nav ul {
+  padding: 5px;
+}
 header .pestañas nav ul li a {
   color: black;
   text-decoration: none;
 }
 
-.main-general {
-  padding: 20px;
-  text-align: center;
-  background-color: #637373;
+@media screen and (min-width: 600px) {
+  header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #D5D0CA;
+  }
+  header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    text-align: center;
+  }
+  header nav ul li {
+    padding: 10px;
+    border-radius: 80px;
+    background-color: #679B9C;
+    transition: background-color 0.5s;
+  }
+  header nav ul li:hover {
+    background-color: #065f61;
+  }
+  header nav ul li a {
+    color: black;
+    text-decoration: none;
+  }
+  header .pestañas nav ul {
+    padding: 5px;
+  }
+  header .pestañas nav ul li a {
+    color: black;
+    text-decoration: none;
+  }
 }
-.main-general h2 {
-  color: #FFEADB;
-  padding: 20px;
-  margin: 50px 50px;
-  border-radius: 80px;
-  background-color: black;
-}
-
 .main-general {
   padding: 30px 20px;
+  text-align: center;
+  background-color: #637373;
+  flex-direction: column;
+}
+
+h2 {
+  color: #FFEADB !important;
+  padding: 20px 10px;
+  margin: 50px;
+  border-radius: 80px;
+  background-color: black;
+  flex-direction: column;
+}
+
+.comentarios {
+  margin: 200px 0px 0px;
 }
 
 /* estilo del index para desktop */
 @media screen and (min-width: 1024px) {
   h2 {
     color: #FFEADB;
-    padding: 20px;
-    margin: 50px 500px;
+    padding: 20px 10px;
+    margin: 50px;
     border-radius: 80px;
     background-color: black;
   }
   .texto-main {
-    padding: 30px 400px;
+    padding: 30px 150px;
   }
 }
 main img {
-  margin: 20px 20px;
+  margin: 0px 0px 30px;
   padding: 2px;
   border-radius: 10px;
   background-color: black;
@@ -80,14 +121,16 @@ main img {
 
 /*PAGINA PANADERIA*/
 .main-general .texto-panaderia {
-  margin: 40px 50px;
+  margin: 40px 20px;
   text-align: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .campo, .demi, .molde, .focaccia {
   display: flex;
   align-items: center;
+  flex-direction: column;
   margin: 40px;
 }
 .campo img, .demi img, .molde img, .focaccia img {
@@ -104,6 +147,7 @@ main img {
 .budin-limon, .coockie-avellanas, .alfajor-mani, .pepas {
   display: flex;
   align-items: center;
+  flex-direction: column;
   margin: 40px;
 }
 .budin-limon img, .coockie-avellanas img, .alfajor-mani img, .pepas img {
@@ -120,6 +164,7 @@ main img {
 .medialuna-manteca, .medialuna-grasa, .palmeritas {
   display: flex;
   align-items: center;
+  flex-direction: column;
   margin: 40px;
 }
 .medialuna-manteca img, .medialuna-grasa img, .palmeritas img {
@@ -184,6 +229,39 @@ body, .body-galeria {
 
 /*estilos tablet*/
 @media screen and (min-width: 600px) {
+  header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #D5D0CA;
+  }
+  header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    text-align: center;
+  }
+  header nav ul li {
+    padding: 10px;
+    border-radius: 80px;
+    background-color: #679B9C;
+    transition: background-color 0.5s;
+  }
+  header nav ul li:hover {
+    background-color: #065f61;
+  }
+  header nav ul li a {
+    color: black;
+    text-decoration: none;
+  }
+  header .pestañas nav ul {
+    padding: 5px;
+  }
+  header .pestañas nav ul li a {
+    color: black;
+    text-decoration: none;
+  }
   .main-g .contenedor {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 50%);
@@ -211,6 +289,10 @@ body, .body-galeria {
   .main-g .contenedor .img-cinco {
     grid-column: span 3;
   }
+}
+footer {
+  background-color: #679B9C;
+  border-radius: 50px;
 }
 
 /*# sourceMappingURL=main.css.map */

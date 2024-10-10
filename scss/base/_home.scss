@@ -2,7 +2,6 @@
 @import"../utilidades/mixin";
 @import"../utilidades/listas";
 
-
 header{
     display: flex;
     flex-wrap: wrap;
@@ -35,6 +34,7 @@ header{
     .pestañas{
         nav{
             ul{
+                padding: 5px;
                 li{
                     a{
                         color: black;
@@ -47,26 +47,77 @@ header{
 }
 
 
+// ESTILOS DE MENU PARA TABLET
+
+@media screen and (min-width: 600px){
+    header{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #D5D0CA;
+    nav{
+        ul{
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+            text-align: center;
+            li{
+                padding: 10px;
+                border-radius: 80px;
+                background-color: nth($list-color, 4);
+                transition: background-color 0.5s;
+                &:hover {
+                background-color: nth($list-color,5);
+                 }
+                a{
+                    color: black;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+header{
+    .pestañas{
+        nav{
+            ul{
+                padding: 5px;
+                li{
+                    a{
+                        color: black;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}
+    
+}
+
 //SECCION MAIN
 
 .main-general{
-    padding: 20px;
+    padding: 30px 20px;
     text-align: center;
     background-color: #637373;
-    h2{
-        color: #FFEADB;
-        padding: 20px;
-        margin: 50px 50px;
-        border-radius: 80px;
-        background-color: black;
+    flex-direction: column;
     }
-}
+ 
+h2{
+    color: #FFEADB !important;
+    padding: 20px 10px;
+    margin: 50px;
+    border-radius: 80px;
+    background-color: black;
+    flex-direction: column;
+    }
 
-
-.main-general{
-    padding: 30px 20px;
-}
-
+.comentarios{
+    margin: 200px 0px 0px;
+    }
+ 
 /* estilo del index para desktop */
 
 @media screen and (min-width: 1024px){
@@ -75,15 +126,15 @@ header{
     }
 
     .texto-main{
-        padding: 30px 400px;
+        padding: 30px 150px;
     }
 }
 
-//nestring de las imagenes en general
+//nesting de las imagenes en general
 
 main{
     img{
-        margin: 20px 20px;
+        margin: 0px 0px 30px;
         padding: 2px;
         border-radius: 10px;
         background-color: black; 
@@ -94,9 +145,10 @@ main{
 
 .main-general{
     .texto-panaderia{
-        margin: 40px 50px;
+        margin: 40px 20px;
         text-align: center;
         align-items: center;
+        flex-direction: column;  
     }
 }
 
@@ -104,6 +156,7 @@ main{
     @include orden-panes;
     img{
         border-radius: 50px;
+
     }
 }
 
@@ -180,6 +233,7 @@ main{
 
 /*PAGINA GALERIA*/
 
+
 body, .body-galeria{
     background-color: #679b9c;
 }
@@ -225,6 +279,53 @@ body, .body-galeria{
 
 @media screen and (min-width:600px){
     
+    header{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #D5D0CA;
+    nav{
+        ul{
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+            text-align: center;
+            li{
+                padding: 10px;
+                border-radius: 80px;
+                background-color: nth($list-color, 4);
+                transition: background-color 0.5s;
+                &:hover {
+                background-color: nth($list-color,5);
+                 }
+                a{
+                    color: black;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+header{
+    .pestañas{
+        nav{
+            ul{
+                padding: 5px;
+                li{
+                    a{
+                        color: black;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+    
+    
+    
     .main-g .contenedor{
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 50%);
@@ -259,4 +360,14 @@ body, .body-galeria{
         grid-column: span 3;
     }
 }
+footer{
+    background-color: #679B9C;
+    border-radius: 50px;
+}
+
+// menu hamburguesa
+
+
+
+
 
