@@ -10,10 +10,6 @@ body {
 }
 
 header {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-evenly;
   background-color: #D5D0CA;
 }
 header nav ul {
@@ -44,12 +40,8 @@ header .pestañas nav ul li a {
   text-decoration: none;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 576px) {
   header {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-evenly;
     background-color: #D5D0CA;
   }
   header nav ul {
@@ -87,7 +79,7 @@ header .pestañas nav ul li a {
 }
 
 h2 {
-  color: #FFEADB !important;
+  color: #FFEADB;
   padding: 20px 10px;
   margin: 50px;
   border-radius: 80px;
@@ -100,18 +92,6 @@ h2 {
 }
 
 /* estilo del index para desktop */
-@media screen and (min-width: 1024px) {
-  h2 {
-    color: #FFEADB;
-    padding: 20px 10px;
-    margin: 50px;
-    border-radius: 80px;
-    background-color: black;
-  }
-  .texto-main {
-    padding: 30px 150px;
-  }
-}
 main img {
   margin: 0px 0px 30px;
   padding: 2px;
@@ -180,6 +160,16 @@ main img {
 }
 
 @media screen and (min-width: 1024px) {
+  h2 {
+    color: #FFEADB;
+    padding: 20px 10px;
+    margin: 50px;
+    border-radius: 80px;
+    background-color: black;
+  }
+  .texto-main {
+    padding: 30px 150px;
+  }
   .main-general .comentarios {
     display: grid;
     grid-template-columns: 2fr;
@@ -228,7 +218,7 @@ body, .body-galeria {
 }
 
 /*estilos tablet*/
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 576px) {
   header {
     display: flex;
     flex-wrap: wrap;
