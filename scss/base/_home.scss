@@ -3,10 +3,10 @@
 @import"../utilidades/listas";
 
 header{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-evenly;
+    // display: flex;
+    // flex-wrap: wrap;
+    // align-items: center;
+    // justify-content: space-evenly;
     background-color: #D5D0CA;
     nav{
         ul{
@@ -49,12 +49,12 @@ header{
 
 // ESTILOS DE MENU PARA TABLET
 
-@media screen and (min-width: 600px){
+@media screen and (min-width: 576px){
     header{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-evenly;
+    // display: flex;
+    // flex-wrap: wrap;
+    // align-items: center;
+    // justify-content: space-evenly;
     background-color: #D5D0CA;
     nav{
         ul{
@@ -68,8 +68,8 @@ header{
                 background-color: nth($list-color, 4);
                 transition: background-color 0.5s;
                 &:hover {
-                background-color: nth($list-color,5);
-                 }
+                    background-color: nth($list-color,5);
+                }
                 a{
                     color: black;
                     text-decoration: none;
@@ -106,7 +106,7 @@ header{
     }
  
 h2{
-    color: #FFEADB !important;
+    color: #FFEADB; 
     padding: 20px 10px;
     margin: 50px;
     border-radius: 80px;
@@ -120,15 +120,15 @@ h2{
  
 /* estilo del index para desktop */
 
-@media screen and (min-width: 1024px){
-    h2{
-        @include h2-desktop
-    }
+// @media screen and (min-width: 1024px){
+//     h2{
+//         @include h2-desktop
+//     }
 
-    .texto-main{
-        padding: 30px 150px;
-    }
-}
+//     .texto-main{
+//         padding: 30px 150px;
+//     }
+// }
 
 //nesting de las imagenes en general
 
@@ -206,6 +206,15 @@ main{
 }
 
 @media screen and (min-width: 1024px){
+    
+    h2{
+        @include h2-desktop
+    }
+
+    .texto-main{
+        padding: 30px 150px;
+    }
+    
     .main-general .comentarios{
         display: grid;
         grid-template-columns: 2fr;
@@ -277,7 +286,7 @@ body, .body-galeria{
 
 /*estilos tablet*/
 
-@media screen and (min-width:600px){
+@media screen and (min-width: 576px){
     
     header{
     display: flex;
@@ -323,7 +332,7 @@ header{
     }
 }
 
-    
+
     
     
     .main-g .contenedor{
