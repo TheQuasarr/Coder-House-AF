@@ -3,10 +3,10 @@
 @import"../utilidades/listas";
 
 header{
-    // display: flex;
-    // flex-wrap: wrap;
-    // align-items: center;
-    // justify-content: space-evenly;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
     background-color: #D5D0CA;
     nav{
         ul{
@@ -30,60 +30,27 @@ header{
         }
     }
 }
-header{
-    .pestañas{
-        nav{
-            ul{
-                padding: 5px;
-                li{
-                    a{
-                        color: black;
-                        text-decoration: none;
-                    }
-                }
-            }
-        }
-    }
-}
 
 
 // ESTILOS DE MENU PARA TABLET
 
 @media screen and (min-width: 576px){
     header{
-    // display: flex;
-    // flex-wrap: wrap;
-    // align-items: center;
-    // justify-content: space-evenly;
-    background-color: #D5D0CA;
-    nav{
-        ul{
-            list-style: none;
-            display: flex;
-            gap: 1rem;
-            text-align: center;
-            li{
-                padding: 10px;
-                border-radius: 80px;
-                background-color: nth($list-color, 4);
-                transition: background-color 0.5s;
-                &:hover {
-                    background-color: nth($list-color,5);
-                }
-                a{
-                    color: black;
-                    text-decoration: none;
-                }
-            }
-        }
-    }
-}
-header{
-    .pestañas{
+        background-color: #D5D0CA;
         nav{
             ul{
-                padding: 5px;
+                list-style: none;
+                display: flex;
+                gap: 1rem;
+                text-align: center;
                 li{
+                    padding: 10px;
+                    border-radius: 80px;
+                    background-color: nth($list-color, 4);
+                    transition: background-color 0.5s;
+                    &:hover {
+                        background-color: nth($list-color,5);
+                    }
                     a{
                         color: black;
                         text-decoration: none;
@@ -91,8 +58,8 @@ header{
                 }
             }
         }
-    }
 }
+
     
 }
 
@@ -103,35 +70,18 @@ header{
     text-align: center;
     background-color: #637373;
     flex-direction: column;
-    }
+    
+    h2{
+        color: #FFEADB; 
+        padding: 20px 10px;
+        margin: 50px;
+        border-radius: 80px;
+        background-color: black;
+        flex-direction: column;
+        }
+
+}
  
-h2{
-    color: #FFEADB; 
-    padding: 20px 10px;
-    margin: 50px;
-    border-radius: 80px;
-    background-color: black;
-    flex-direction: column;
-    }
-
-.comentarios{
-    margin: 200px 0px 0px;
-    }
- 
-/* estilo del index para desktop */
-
-// @media screen and (min-width: 1024px){
-//     h2{
-//         @include h2-desktop
-//     }
-
-//     .texto-main{
-//         padding: 30px 150px;
-//     }
-// }
-
-//nesting de las imagenes en general
-
 main{
     img{
         margin: 0px 0px 30px;
@@ -156,7 +106,6 @@ main{
     @include orden-panes;
     img{
         border-radius: 50px;
-
     }
 }
 
@@ -195,21 +144,20 @@ main{
 }
 .main-general{
     .comentarios{
-        .all-com{
-            color: whitesmoke;
-            padding: 20px;
-            margin: 10px;
-            background-color: #679b9c;
-            border-radius: 20px;
-        }
+            margin: 200px 0px 0px;
+            .all-com{
+                color: whitesmoke;
+                padding: 20px;
+                margin: 10px;
+                background-color: #679b9c;
+                border-radius: 20px;
+            }
     }
 }
 
+//MQ de los comentarios de laminados
+
 @media screen and (min-width: 1024px){
-    
-    h2{
-        @include h2-desktop
-    }
 
     .texto-main{
         padding: 30px 150px;
@@ -243,16 +191,16 @@ main{
 /*PAGINA GALERIA*/
 
 
-body, .body-galeria{
+.body-galeria{
     background-color: #679b9c;
-}
 
-.main-g{
-    .texto-galeria{
-        text-align: center;
-        margin: 50px;
-        padding: 30px;
-        
+    .main-g{
+        .texto-galeria{
+            text-align: center;
+            margin: 50px;
+            padding: 30px; 
+        }
+    
     }
 
     .contenedor{
@@ -281,47 +229,26 @@ body, .body-galeria{
 
 
 
-
-
-
 /*estilos tablet*/
 
 @media screen and (min-width: 576px){
     
     header{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-evenly;
-    background-color: #D5D0CA;
-    nav{
-        ul{
-            list-style: none;
-            display: flex;
-            gap: 1rem;
-            text-align: center;
-            li{
-                padding: 10px;
-                border-radius: 80px;
-                background-color: nth($list-color, 4);
-                transition: background-color 0.5s;
-                &:hover {
-                background-color: nth($list-color,5);
-                 }
-                a{
-                    color: black;
-                    text-decoration: none;
-                }
-            }
-        }
-    }
-}
-header{
-    .pestañas{
+        background-color: #D5D0CA;
         nav{
             ul{
-                padding: 5px;
+                list-style: none;
+                display: flex;
+                gap: 1rem;
+                text-align: center;
                 li{
+                    padding: 10px;
+                    border-radius: 80px;
+                    background-color: nth($list-color, 4);
+                    transition: background-color 0.5s;
+                    &:hover {
+                    background-color: nth($list-color,5);
+                    }
                     a{
                         color: black;
                         text-decoration: none;
@@ -329,27 +256,26 @@ header{
                 }
             }
         }
-    }
 }
 
-
-    
-    
     .main-g .contenedor{
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 50%);
         column-gap: 10px;
-        
-        .img-cuatro{
-            grid-column: span 2;
-    }
+            .img-cuatro{
+                grid-column: span 2;
+            }
     }
 
 }
 
-/*estilos desktop*/
+/*estilos desktop iamgenes galeria*/
 
 @media screen and (min-width:1024px){
+
+    header{
+        background-color: #D5D0CA;
+    }
     
     .main-g .contenedor .img-dos, .main-g .contenedor .img-cinco{
         display: block;
@@ -373,10 +299,4 @@ footer{
     background-color: #679B9C;
     border-radius: 50px;
 }
-
-// menu hamburguesa
-
-
-
-
 
